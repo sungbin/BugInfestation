@@ -1,16 +1,23 @@
-package edu.handong.csee.java.lab06;
+package edu.handong.csee.java.lab06; //
 
 import java.util.Scanner; // including Scanner functions
-public class main {
+/**
+ * @author sungbin
+ * this function scan two number (one means cubic feet of house, another means number of roaches) from user
+ * call BugInfestation function to calculate minimum weeks when roaches increase and house is full of roaches 
+ * so need BugInfestation function
+ * after calculation, print result minimum weeks, final Bugs population, final Bugs volume.
+ */
+public class main { //declare main class type public
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { //declare main method type public
 		
 		double houseVolume; //— volume of the house
 		int startPopulation; //—initial number of roaches
 		
 		// TODO Auto-generated method stub
-		Scanner keyboard = new Scanner(System.in);
-		BugInfestation bug = new BugInfestation();
+		Scanner keyboard = new Scanner(System.in); //make instance of Scanner class
+		BugInfestation bug = new BugInfestation(); //make instance of BugInfestation class
 
 		System.out.print("Enter the total volume of your house in cubic feet: "); //print sentence
 		houseVolume = keyboard.nextDouble(); //input one spelling to variable1

@@ -1,5 +1,16 @@
 package edu.handong.csee.java.lab06;
 
+/**
+ * @author sungbin
+ * this class include many functions like setting, condition check
+ * set function is initialization function before starting
+ * IsContinue function is to check condition if it should be stopped
+ * NewBugs function put the value to newBugs variable after calculation
+ * NewBugVolume function put the value after calculation to newBugsVolume variable
+ * Population function put the value to newBugs variable after calculation
+ * TotalBugVolume function put the value to newBugs variable after calculation
+ * CountWeeks function increase 1 countWeeks
+ */
 public class BugInfestation {
 
 	static final double GROWTH_RATE = 0.95; //—weekly growth rate of the roach population
