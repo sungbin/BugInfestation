@@ -8,12 +8,12 @@ import java.util.Scanner; // including Scanner functions
  * so need BugInfestation function
  * after calculation, print result minimum weeks, final Bugs population, final Bugs volume.
  */
-public class main { //declare main class type public
+public class main { //declare main class public type
 
-	public static void main(String[] args) { //declare main method type public
+	public static void main(String[] args) { //declare main method public type
 		
-		double houseVolume; //— volume of the house
-		int startPopulation; //—initial number of roaches
+		double houseVolume; //— declare variable, volume of the house double type
+		int startPopulation; //—declare variable, initial number of roaches int type
 		
 		// TODO Auto-generated method stub
 		Scanner keyboard = new Scanner(System.in); //make instance of Scanner class
@@ -26,13 +26,13 @@ public class main { //declare main class type public
 		
 		bug.set(houseVolume,startPopulation); //call set function
 		
-		while(bug.IsContinue()) // if IsContinue function is TRUE, repeat!
+		while(bug.isContinue()) // if IsContinue function is TRUE, repeat!
 		{
-			bug.NewBugs(); //call NewBugs function
-			bug.NewBugVolume(); //call NewBugVolume function
-			bug.Population(); //call Population function
-			bug.TotalBugVolume(); //call TotalBugVolume function
-			bug.CountWeeks(); //call CountWekks function
+			bug.newBugs(); //call NewBugs function
+			bug.newBugVolume(); //call NewBugVolume function
+			bug.computePopulation(); //call Population function
+			bug.totalBugVolume(); //call TotalBugVolume function
+			bug.countWeeks(); //call CountWekks function
 		}
 		
 		System.out.println("Starting with a roach population of "+ bug.startPopulation); //print sentence and variable
@@ -41,6 +41,5 @@ public class main { //declare main class type public
 		System.out.println("the house will be filled with " + bug.population + " roaches."); //print sentence and variable
 		System.out.println("They will fill a volume of " + bug.totalBugVolume + " cubic feet."); //print sentence and variable
 		System.out.println("Better call Debugging Experts Inc."); //print sentence and
-
 	}
 }

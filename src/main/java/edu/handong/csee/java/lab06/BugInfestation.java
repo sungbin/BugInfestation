@@ -3,15 +3,16 @@ package edu.handong.csee.java.lab06; //the class is in this package
 /**
  * @author sungbin
  * this class include many functions like setting, condition check
- * set function is initialization function before starting
- * IsContinue function is to check condition if it should be stopped
- * NewBugs function put the value to newBugs variable after calculation
- * NewBugVolume function put the value after calculation to newBugsVolume variable
- * Population function put the value to newBugs variable after calculation
- * TotalBugVolume function put the value to newBugs variable after calculation
- * CountWeeks function increase 1 countWeeks
+ * 	set function is initialization function before starting
+ * 	IsContinue function is to check condition if it should be stopped
+ * 	NewBugs function put the value to newBugs variable after calculation
+ * 	NewBugVolume function put the value after calculation to newBugsVolume variable
+ * 	Population function put the value to newBugs variable after calculation
+ * 	TotalBugVolume function put the value to newBugs variable after calculation
+ * 	CountWeeks function increase 1 countWeeks
+ * all functions are declared of public type
  */
-public class BugInfestation { // declare BugInfestation type public
+public class BugInfestation { // declare BugInfestation public type
 
 	static final double GROWTH_RATE = 0.95; //—weekly growth rate of the roach population
 	static final double ONE_BUG_VOLUME = 0.002; //—volume of an average roach (a constant 0.002)
@@ -23,7 +24,7 @@ public class BugInfestation { // declare BugInfestation type public
 	int newBugs; //—number of roaches hatched this week
 	double newBugVolume; //—volume of new roaches
 	
-	void set(double h, int sP) //declare set function, declare parameter variable
+	public void set(double h, int sP) //declare set function public type, declare parameter variable
 	{
 		houseVolume = h; //push h to houseVolume
 		startPopulation = sP; //push sP to startPopulation
@@ -32,30 +33,30 @@ public class BugInfestation { // declare BugInfestation type public
 		countWeeks = 0; // initialize countWeeks
 	}
 	
-	public boolean IsContinue() //declare IsContinue function type public, return type is boolean
+	public boolean isContinue() //declare IsContinue function type public, return type is boolean
 	{
 		if(totalBugVolume < houseVolume) // Is totalBugVolume smaller than houseVolume??
 			return true; // if correct, return true
 		return false; // or return false
 	}
 	
-	void NewBugs() //declare NewBugs function
+	public void newBugs() //declare NewBugs function public type
 	{
 		newBugs = (int) (population * GROWTH_RATE); // push value(population * GROWTH_RATE) to newBugs
 	}
-	void NewBugVolume() //declare NewBugVolume function
+	public void newBugVolume() //declare NewBugVolume function public type
 	{
 		newBugVolume = newBugs * ONE_BUG_VOLUME; // push value(newBugs * ONE_BUG_VOLUME) to newBugVolume
 	}
-	void Population() //declare Population function
+	public void computePopulation() //declare Population function public type
 	{
 		population = population + newBugs; // push value(population + newBugs) to population
 	}
-	void TotalBugVolume() //declare TotalBugVolume function
+	public void totalBugVolume() //declare TotalBugVolume function public type
 	{
 		totalBugVolume = (int) (totalBugVolume + newBugVolume); //push value (totalBugVolume + newBugVolume) to totalBugVolume through int type
 	}
-	void CountWeeks() //declare ConutWeeks function
+	public void countWeeks() //declare ConutWeeks function public type
 	{
 		countWeeks = countWeeks +1; // Increase 1 countWeeks ;
 	}
