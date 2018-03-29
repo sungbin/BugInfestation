@@ -1,4 +1,4 @@
-package edu.handong.csee.java.lab06; //
+package edu.handong.csee.java.lab06; //the class is in this package
 
 import java.util.Scanner; // including Scanner functions
 /**
@@ -24,23 +24,23 @@ public class main { //declare main class type public
 		System.out.print("Enter the estimated number of roaches in your house: "); //print sentence
 		startPopulation = keyboard.nextInt(); //input one spelling to variable1
 		
-		bug.set(houseVolume,startPopulation);
+		bug.set(houseVolume,startPopulation); //call set function
 		
-		while(bug.IsContinue())
+		while(bug.IsContinue()) // if IsContinue function is TRUE, repeat!
 		{
-			bug.NewBugs();
-			bug.NewBugVolume();
-			bug.Population();
-			bug.TotalBugVolume();
-			bug.CountWeeks();
+			bug.NewBugs(); //call NewBugs function
+			bug.NewBugVolume(); //call NewBugVolume function
+			bug.Population(); //call Population function
+			bug.TotalBugVolume(); //call TotalBugVolume function
+			bug.CountWeeks(); //call CountWekks function
 		}
 		
-		System.out.println("Starting with a roach population of "+ bug.startPopulation);
+		System.out.println("Starting with a roach population of "+ bug.startPopulation); //print sentence and variable
 		System.out.println("and a house with a volume of " + bug.houseVolume + " cubic feet, after " 
-				+bug.countWeeks + " weeks,");
-		System.out.println("the house will be filled with " + bug.population + " roaches.");
-		System.out.println("They will fill a volume of " + bug.totalBugVolume + " cubic feet.");
-		System.out.println("Better call Debugging Experts Inc.");
+							+bug.countWeeks + " weeks,"); //print sentence and variable
+		System.out.println("the house will be filled with " + bug.population + " roaches."); //print sentence and variable
+		System.out.println("They will fill a volume of " + bug.totalBugVolume + " cubic feet."); //print sentence and variable
+		System.out.println("Better call Debugging Experts Inc."); //print sentence and
 
 	}
 }
