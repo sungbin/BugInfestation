@@ -1,4 +1,4 @@
-package edu.handong.csee.java.lab06;
+package edu.handong.csee.java.lab06; //the class is in this package
 
 /**
  * @author sungbin
@@ -11,7 +11,7 @@ package edu.handong.csee.java.lab06;
  * TotalBugVolume function put the value to newBugs variable after calculation
  * CountWeeks function increase 1 countWeeks
  */
-public class BugInfestation {
+public class BugInfestation { // declare BugInfestation type public
 
 	static final double GROWTH_RATE = 0.95; //—weekly growth rate of the roach population
 	static final double ONE_BUG_VOLUME = 0.002; //—volume of an average roach (a constant 0.002)
@@ -23,40 +23,40 @@ public class BugInfestation {
 	int newBugs; //—number of roaches hatched this week
 	double newBugVolume; //—volume of new roaches
 	
-	void set(double h, int sP)
+	void set(double h, int sP) //declare set function, declare parameter variable
 	{
-		houseVolume = h;
-		startPopulation = sP;
-		population = startPopulation;
-		totalBugVolume = (int) (population * ONE_BUG_VOLUME);
-		countWeeks = 0;
+		houseVolume = h; //push h to houseVolume
+		startPopulation = sP; //push sP to startPopulation
+		population = startPopulation; //push startPopulation to population
+		totalBugVolume = (int) (population * ONE_BUG_VOLUME); //push value (population * constant) to total BugVolume through int type
+		countWeeks = 0; // initialize countWeeks
 	}
 	
-	public boolean IsContinue()
+	public boolean IsContinue() //declare IsContinue function type public, return type is boolean
 	{
-		if(totalBugVolume < houseVolume)
-			return true;
-		return false;
+		if(totalBugVolume < houseVolume) // Is totalBugVolume smaller than houseVolume??
+			return true; // if correct, return true
+		return false; // or return false
 	}
 	
-	void NewBugs()
+	void NewBugs() //declare NewBugs function
 	{
-		newBugs = (int) (population * GROWTH_RATE);
+		newBugs = (int) (population * GROWTH_RATE); // push value(population * GROWTH_RATE) to newBugs
 	}
-	void NewBugVolume()
+	void NewBugVolume() //declare NewBugVolume function
 	{
-		newBugVolume = newBugs * ONE_BUG_VOLUME;
+		newBugVolume = newBugs * ONE_BUG_VOLUME; // push value(newBugs * ONE_BUG_VOLUME) to newBugVolume
 	}
-	void Population()
+	void Population() //declare Population function
 	{
-		population = population + newBugs;
+		population = population + newBugs; // push value(population + newBugs) to population
 	}
-	void TotalBugVolume()
+	void TotalBugVolume() //declare TotalBugVolume function
 	{
-		totalBugVolume = (int) (totalBugVolume + newBugVolume);
+		totalBugVolume = (int) (totalBugVolume + newBugVolume); //push value (totalBugVolume + newBugVolume) to totalBugVolume through int type
 	}
-	void CountWeeks()
+	void CountWeeks() //declare ConutWeeks function
 	{
-		countWeeks = countWeeks +1;
+		countWeeks = countWeeks +1; // Increase 1 countWeeks ;
 	}
 }
