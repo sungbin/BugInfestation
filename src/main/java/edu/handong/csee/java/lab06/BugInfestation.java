@@ -14,32 +14,38 @@ public class BugInfestation {
 	
 	void set(double h, int sP)
 	{
-		
+		houseVolume = h;
+		startPopulation = sP;
+		population = startPopulation;
+		totalBugVolume = (int) (population * ONE_BUG_VOLUME);
+		countWeeks = 0;
 	}
 	
 	public boolean IsContinue()
 	{
-
+		if(totalBugVolume < houseVolume)
+			return true;
+		return false;
 	}
 	
 	void NewBugs()
 	{
-
+		newBugs = (int) (population * GROWTH_RATE);
 	}
 	void NewBugVolume()
 	{
-
+		newBugVolume = newBugs * ONE_BUG_VOLUME;
 	}
 	void Population()
 	{
-
+		population = population + newBugs;
 	}
 	void TotalBugVolume()
 	{
-
+		totalBugVolume = (int) (totalBugVolume + newBugVolume);
 	}
 	void CountWeeks()
 	{
-
+		countWeeks = countWeeks +1;
 	}
 }
